@@ -1,0 +1,27 @@
+.landing {
+  display: grid;
+  grid-template-columns: 40px 50px auto 50px 40px;
+  grid-template-rows: 10% auto 10%;
+  grid-gap: 20px;
+}
+
+.swc-wrapper {
+  grid-column: 1 / 5;
+  grid-row: 1 / 4;
+  justify-self: center;
+  align-self: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.swc-front-text {
+  color: #ffdb6d;
+  font-size: 7em;
+  font-weight: 800;
+  line-height: 0%;
+  -webkit-text-stroke-color: #0055fe;
+  -webkit-text-stroke-width: 4px;
+  letter-spacing: 0px;
+  pointer-events: none;
+}
