@@ -50,7 +50,7 @@ class SWC extends React.Component {
         fontSize: '5em',
         transform: `translate3d(${this.state.xWalk}px, ${this.state.yWalk}px, ${
           this.state.yWalk
-        }px) rotate(${this.state.yWalk}deg)`,
+        }px)`,
       },
     };
 
