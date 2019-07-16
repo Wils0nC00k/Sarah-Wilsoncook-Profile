@@ -34,24 +34,8 @@ class Canvas extends React.Component {
         start: {...this.prevPos},
         stop: {...offSetData},
       };
-      //Change hue to run through colours
-      let hue = this.state.hue;
-      this.ctx.strokeStyle = `hsl(${this.state.hue}, 100%, 50%)`;
-      hue++;
-      if (hue >= 360) {
-        hue = 1;
-      }
-      this.setState({
-        hue: hue,
-      });
-      if (this.ctx.lineWidth >= 100 || this.ctx.lineWidth <= 1) {
-        this.direction = !this.direction;
-      }
-      if (this.direction) {
-        this.ctx.lineWidth++;
-      } else {
-        this.ctx.lineWidth--;
-      }
+      this.ctx.strokeStyle = '#64a4f7';
+      this.ctx.lineWidth = 200;
       this.line = this.state.line.concat(positionData);
       this.paint(this.prevPos, offSetData, this.state.strokeStyle);
     }

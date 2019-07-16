@@ -1,4 +1,5 @@
 import React from 'react';
+import {ReactComponent as SWCvector} from './svg/SWCvector.svg';
 
 class SWC extends React.Component {
   constructor(props) {
@@ -13,10 +14,6 @@ class SWC extends React.Component {
       yWalk: 0,
     };
     this.onMouseMove = this.onMouseMove.bind(this);
-  }
-
-  verticalCenter() {
-    return window.innerHeight / 3;
   }
 
   onMouseMove(e) {
@@ -43,11 +40,9 @@ class SWC extends React.Component {
   render() {
     const styles = {
       wrapper: {
-        transform: `translateY(${this.verticalCenter()}px)`,
         perspective: '1000px',
       },
       trippy: {
-        fontSize: '5em',
         transform: `translate3d(${this.state.xWalk}px, ${this.state.yWalk}px, ${
           this.state.yWalk
         }px)`,
@@ -56,16 +51,9 @@ class SWC extends React.Component {
 
     return (
       <div className='swc-wrapper' onMouseMove={this.onMouseMove}>
-        <div style={styles.wrapper}>
-          <p className='swc-front-text' style={styles.trippy}>
-            SARAH
-          </p>
-          <p className='swc-front-text' style={styles.trippy}>
-            WILSO
-          </p>
-          <p className='swc-front-text' style={styles.trippy}>
-            NCOOK
-          </p>
+        <div style={styles.wrapper} />
+        <div style={styles.trippy}>
+          <SWCvector />
         </div>
       </div>
     );

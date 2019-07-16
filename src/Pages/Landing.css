@@ -25,3 +25,28 @@
   letter-spacing: 0px;
   pointer-events: none;
 }
+
+.circle-purple-wrapper {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.triangle-green-wrapper {
+  grid-column: 3 / 5;
+  grid-row: 2 / 3;
+}
+
+.square-orange-wrapper {
+  grid-column: 3 / 5;
+  grid-row: 2 / 3;
+}
+
+.circle-yellow-blue-wrapper {
+  grid-column: 3 / 5;
+  grid-row: 2 / 3;
+}
+
+.octogon-purple-pink-wrapper {
+  grid-column: 3 / 5;
+  grid-row: 2 / 3;
+}
