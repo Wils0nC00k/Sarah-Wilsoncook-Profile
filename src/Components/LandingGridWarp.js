@@ -1,7 +1,12 @@
 import React from 'react';
 import {ReactComponent as SWCvector} from './svg/SWCvector.svg';
+import CirclePurple from '../Components/GeometricShapes/CirclePurple';
+import TriangleGreen from '../Components/GeometricShapes/TriangleGreen';
+import SquareOrange from '../Components/GeometricShapes/SquareOrange';
+import CircleYellowBlue from '../Components/GeometricShapes/CircleYellowBlue';
+import OctogonPurplePink from '../Components/GeometricShapes/OctogonPurplePink';
 
-class SWC extends React.Component {
+class LandingGridWarp extends React.Component {
   constructor(props) {
     super(props);
 
@@ -39,10 +44,18 @@ class SWC extends React.Component {
 
   render() {
     const styles = {
-      wrapper: {
+      gridWarp: {
         perspective: '1000px',
+        display: 'grid',
+        gridTemplateColumns: '50px repeat(8, 1fr) 50px',
+        gridTemplateRows: '50px repeat(4, 1fr) 50px',
+        gridGap: '20px',
+        width: '100vw',
+        height: '100vh',
       },
       trippy: {
+        gridColumn: '5 / 6',
+        gridRow: '3 / 4',
         transform: `translate3d(${this.state.xWalk}px, ${this.state.yWalk}px, ${
           this.state.yWalk
         }px)`,
@@ -50,14 +63,18 @@ class SWC extends React.Component {
     };
 
     return (
-      <div className='swc-wrapper' onMouseMove={this.onMouseMove}>
-        <div style={styles.wrapper} />
+      <div style={styles.gridWarp} onMouseMove={this.onMouseMove}>
         <div style={styles.trippy}>
           <SWCvector />
         </div>
+        <CirclePurple style={styles.circlePurple} />
+        <TriangleGreen style={styles.triangleGreen} />
+        <SquareOrange style={styles.squareOrange} />
+        <CircleYellowBlue style={styles.circleYellowBlue} />
+        <OctogonPurplePink style={styles.octogonPurplePink} />
       </div>
     );
   }
 }
 
-export default SWC;
+export default LandingGridWarp;
